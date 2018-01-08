@@ -34,7 +34,7 @@ var dbName = process.env.DB_NAME || 'node-login';
 var dbURL = 'mongodb://'+dbHost+':'+dbPort+'/'+dbName;
 if (app.get('env') == 'live'){
 // prepend url with authentication credentials // 
-	dbURL = 'mongodb://'+process.env.DB_USER+':'+process.env.DB_PASS+'@'+dbHost+':'+dbPort+'/'+dbName;
+	dbURL = 'mongodb://heroku_ln7mlkw9:tvtbiv2tlr5clieroho9iv1ej5@ds245337.mlab.com:45337/heroku_ln7mlkw9';
 }
 
 app.use(session({
