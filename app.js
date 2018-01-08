@@ -31,7 +31,7 @@ var dbHost = process.env.DB_HOST || 'localhost'
 var dbPort = process.env.DB_PORT || 27017;
 var dbName = process.env.DB_NAME || 'node-login';
 
-var dbURL = 'mongodb://heroku_ln7mlkw9:tvtbiv2tlr5clieroho9iv1ej5@ds245337.mlab.com:45337/heroku_ln7mlkw9';
+var dbURL = 'mongodb://'+process.env.DB_USER+':'+process.env.DB_PASS+'@'+dbHost+':'+dbPort+'/'+dbName;
 
 app.use(session({
 	secret: 'faeb4453e5d14fe6f6d04637f78077c76c73d1b4',
