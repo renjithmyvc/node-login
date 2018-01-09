@@ -34,10 +34,13 @@ db.open(function(e, d){
 
 var accounts = db.collection('accounts');
 
+console.log('db accounts >>>', accounts);
+
 /* login validation methods */
 
 exports.autoLogin = function(user, pass, callback)
 {
+	console.log('AUTO LOGIN >>>', accounts);
 	accounts.findOne({user:user}, function(e, o) {
 		if (o){
 			o.pass == pass ? callback(o) : callback(null);
@@ -49,6 +52,7 @@ exports.autoLogin = function(user, pass, callback)
 
 exports.manualLogin = function(user, pass, callback)
 {
+	console.log('MANUAL LOGIN >>>', accounts);
 	accounts.findOne({user:user}, function(e, o) {
 		if (o == null){
 			callback('user-not-found');
@@ -68,6 +72,7 @@ exports.manualLogin = function(user, pass, callback)
 
 exports.addNewAccount = function(newData, callback)
 {
+	console.log('NEW ACCOUNT >>>', accounts);
 	accounts.findOne({user:newData.user}, function(e, o) {
 		if (o){
 			callback('username-taken');
@@ -80,6 +85,7 @@ exports.addNewAccount = function(newData, callback)
 						newData.pass = hash;
 					// append date stamp when record was created //
 						newData.date = moment().format('MMMM Do YYYY, h:mm:ss a');
+						console.log('BEFORE INSERT >>>', accounts);
 						accounts.insert(newData, {safe: true}, callback);
 					});
 				}
