@@ -4,7 +4,6 @@ extends layout
 block content
 
 .login_form
-      // header
       .header.wow.fadeInDown
         .container
           .row
@@ -17,53 +16,7 @@ block content
               .logo
                 h1
                   a(href="") Doctor  Login
-      // end
-      // content
-      .sign_in
-        .container
-          .row
-            .col-md-12
-              .col-md-6
-                .hole_max.wow.fadeInRight
-                  .section_vertical
-                    .section_ones
-                     
-              | 					
-              .col-md-6
-                .hole_max.wow.fadeInLeft
-                  .section_vertical
-                    .section_one
-                      form.form-horizontal(role="form")
-                        .form-group
-                          label.col-sm-3.control-label.use(for="userid") User Id
-                          |                     
-                          .col-sm-9
-                            input#uerid.form-control(type="text", placeholder="")
-                        |                 
-                        |                 
-                        .form-group
-                          label.col-sm-3.control-label.use(for="password") Password
-                          |                     
-                          .col-sm-9
-                            input#password.form-control(type="password", placeholder="Password")
-                        |                 
-                        |                 
-                        .form-group
-                          .col-sm-9.col-sm-offset-3
-                            .checkbox
-                              label
-                                input(type="checkbox")
-                                | Keep me signed in
-                        // /.form-group
-                        .login_btn
-                          .two_btn
-                            a.login_button(href="examination.htm") Login
-                          | 						   
-                          a.forget_password.firsttimeregister(href="forgotpassword_dctr_login.html") Forgot your User Id/Password? 
-                          | 						   
-                          a.forget_password.firsttimeregister(href="register.htm") First Time User Register Now 
-        // end
-
+      
 	#login.center-vertical
 		form.well(id='form-login', method='post')
 			h2 Sign In
