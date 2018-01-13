@@ -38,6 +38,10 @@ module.exports = function(app) {
 		});
 	});
 	
+	app.get('/signin', function(req, res) {
+		res.render('signin', {  title: 'Signup', countries : CT });
+	});
+	
 // logged-in user homepage //
 	
 	app.get('/home', function(req, res) {
