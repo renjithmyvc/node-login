@@ -16,7 +16,7 @@ head
 	script(type='text/javascript', src='/vendor/jquery.form.min.js')
     script(type='text/javascript', src='/js/views/signin.js')
   body
-    #login.login_form
+    .login_form
       // header
       .header.wow.fadeInDown
         .container
@@ -45,8 +45,8 @@ head
               .col-md-6
                 .hole_max.wow.fadeInLeft
                   .section_vertical
-                    .section_one
-                      form.form-horizontal(id='form-login', method='post',role='form')
+                    #login.section_one
+			form.form-horizontal(id='form-login', method='post')
                         .form-group
                           label.col-sm-3.control-label.use(for='userid') User Id
                           |                     
