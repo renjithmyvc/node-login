@@ -39,7 +39,20 @@ module.exports = function(app) {
 	});
 	
 	app.get('/signin', function(req, res) {
-		res.render('signin', {  title: 'Signup', countries : CT });
+		// check if the user's credentials are saved in a cookie //
+		if (req.cookies.user == undefined || req.cookies.pass == undefined){
+			res.render('login', { title: 'Hello - Please Login To Your Account' });
+		}	else{
+		// attempt automatic login //
+			AM.autoLogin(req.cookies.user, req.cookies.pass, function(o){
+				if (o != null){
+				    req.session.user = o;
+					res.redirect('/home');
+				} else {
+				    res.render('signin', { title: 'Hello - Please Login To Your Account' });
+				}
+			});
+		}
 	});
 	
 	app.post('/signin', function(req, res){
