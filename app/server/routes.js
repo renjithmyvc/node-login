@@ -50,6 +50,14 @@ module.exports = function(app) {
 		res.render('reports', {  title: 'Reports', countries : CT });
 	});
 	
+	app.get('/examination', function(req, res) {
+		res.render('examination', {  title: 'Examination', countries : CT });
+	});
+	
+	app.get('/examination1', function(req, res) {
+		res.render('examination', {  title: 'Examination1', countries : CT });
+	});
+	
 // logged-in user homepage //
 	
 	app.get('/home', function(req, res) {
