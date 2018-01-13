@@ -1,0 +1,106 @@
+doctype html(lang='en')
+head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title  DOCTOR REGISTER 
+    meta(name='viewport', content='initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet')
+    |   
+    link(href='/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/css/animate.css', rel='stylesheet')
+    link(href='/css/style.css', rel='stylesheet')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(type='text/javascript', src='/js/bootstrap.min.js')
+    |   
+    script(type='text/javascript', src='/js/wow.min.js')
+  body
+    .login_form
+      // header
+      .header.wow.fadeInDown
+        .container
+          .row
+            .col-sm-3
+              .logo
+                h1
+                  a(href='#') Logo
+            | &#x9;
+            .col-sm-9
+              .logo
+                h1
+                  a(href='') Register
+      // end
+      // content
+      .sign_in
+        .container
+          .row
+            .hole_max.wow.fadeInLeft
+              .section_vertical
+                .section_one
+                  form.form-horizontal.doctorregister(role='form')
+                    .form-group
+                      label.col-sm-3.control-label(for='firstName') First Name
+                      |                     
+                      .col-sm-9
+                        input#firstName.form-control(type='text', placeholder='')
+                    | &#x9;&#x9;&#x9;&#x9;
+                    .form-group
+                      label.col-sm-3.control-label(for='lastName') Last Name
+                      |                     
+                      .col-sm-9
+                        input#lastName.form-control(type='text', placeholder='')
+                    | &#x9;&#x9;&#x9;&#x9;
+                    .form-group
+                      label.col-sm-3.control-label(for='userid') User Id
+                      |                     
+                      .col-sm-9
+                        input#userid.form-control(type='text', placeholder='')
+                    |                 
+                    .form-group
+                      label.col-sm-3.control-label(for='email') Email Address
+                      |                     
+                      .col-sm-9
+                        input#email.form-control(type='email', placeholder='Email')
+                    | &#x9;&#x9;&#x9;&#x9;
+                    .form-group
+                      label.col-sm-3.control-label(for='phone') Mobile Number
+                      |                     
+                      .col-sm-9
+                        input#phone.form-control(type='text', placeholder='')
+                    |                 
+                    .form-group
+                      label.col-sm-3.control-label(for='password') Password
+                      |                     
+                      .col-sm-9
+                        input#password.form-control(type='password', placeholder='Password')
+                    |                 
+                    .form-group
+                      label.col-sm-3.control-label(for='cpassword')  Confirm Password
+                      |                     
+                      .col-sm-9
+                        input#cpassword.form-control(type='password', placeholder='Password')
+                    |                 
+                    .form-group
+                      label.col-sm-3.control-label(for='profileimage') Profile Image
+                      |                     
+                      .col-sm-9
+                        input#profileimage.form-control(type='file', placeholder='')
+                    |                 
+                    |                 
+                    |                 
+                    |                 
+                    .login_btn
+                      .two_btn
+                        a.login_button.register(href='examination.htm') Register
+                        |     
+                        a.logut_button(href='doctor_login.htm') Login
+                  // /form
+      // end
+      // footer
+      .footer.wow.fadeInUp
+        .container
+          .row
+            .col-sm-3
+            | &#x9;
+            |       
+            .col-sm-9
+              p.footer_content Copyright 2017.All Rights Reserved.
+      // end
