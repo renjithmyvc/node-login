@@ -43,19 +43,19 @@ head
                 .hole_max.wow.fadeInLeft
                   .section_vertical
                     .section_one
-                      form.form-horizontal(role='form')
+                      form.form-horizontal(id='form-login', method='post',role='form')
                         .form-group
                           label.col-sm-3.control-label.use(for='userid') User Id
                           |                     
                           .col-sm-9
-                            input#uerid.form-control(type='text', placeholder='')
+                            input.form-control(type='text', id='user-tf', name='user', placeholder='Enter username')
                         |                 
                         |                 
                         .form-group
                           label.col-sm-3.control-label.use(for='password') Password
                           |                     
                           .col-sm-9
-                            input#password.form-control(type='password', placeholder='Password')
+                            input.form-control(type='password', id='pass-tf', name='pass', placeholder='Password')
                         |                 
                         |                 
                         .form-group
