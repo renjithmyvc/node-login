@@ -58,6 +58,19 @@ module.exports = function(app) {
 		res.render('examination', {  title: 'Examination1', countries : CT });
 	});
 	
+	app.get('/forgotpassword', function(req, res) {
+		res.render('forgotpassword', {  title: 'Forgot password', countries : CT });
+	});
+	
+	app.get('/profile', function(req, res) {
+		res.render('profile', {  title: 'Profile', countries : CT });
+	});
+	
+	app.get('/register', function(req, res) {
+		res.render('register', {  title: 'Register', countries : CT });
+	});
+	
+	
 // logged-in user homepage //
 	
 	app.get('/home', function(req, res) {
