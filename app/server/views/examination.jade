@@ -1,0 +1,298 @@
+doctype html(lang='en')
+head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title  EXAM 
+    meta(name='viewport', content='initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet')
+    |   
+    link(href='/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/css/animate.css', rel='stylesheet')
+    link(href='/css/font-awesome.min.css', rel='stylesheet')
+    link(href='/css/jquery-ui.css', rel='stylesheet')
+    link(href='/css/style.css', rel='stylesheet')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(type='text/javascript', src='/js/bootstrap.min.js')
+    |  
+    script(type='text/javascript', src='/js/jquery-ui.js')
+    |    
+    script(type='text/javascript', src='/js/wow.min.js')
+    script.
+      $( function() {
+      $( "#datepicker" ).datepicker();
+      } );
+    script.
+      $( function() {
+      $( "#datepickers" ).datepicker();
+      } );
+  body
+    .header_landing_page.wow.fadeInDown
+      .container
+        .row
+          .col-sm-2.col-xs-6
+            .logo
+              h1
+                a(href='#') Logo
+          |       
+          .col-sm-10.col-xs-6
+            .navbar.navbar-default.menu_n
+              .navbar-header
+                span.main_text_menu Menu 
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                  i.fa.fa-bars
+                .navbar-collapse.collapse
+                  .navmenus
+                    ul
+                      li
+                        a(href='examination.htm') Examination
+                      |           
+                      li
+                        a(href='reports.html') Reports
+                      |           
+                      li
+                        p.welcomeadmin Welcome Doctor
+                      | &#x9;&#x9;  
+                      |           
+                      li.profile_dropdwon
+                        a.dropdown-toggle(href='javascript:void(0)', data-toggle='dropdown')
+                          img.defaultimage(src='noimage.png')
+                          |  
+                          span
+                            b.caret
+                        |  
+                        |            
+                        ul.dropdown-menu
+                          li
+                            a(href='profile.html') Profile
+                          |             
+                          li
+                            a(href='changepassword.html') Change Password
+                          |             
+                          li
+                            a(href='doctor_login.htm') Logout
+                      | &#x9;&#x9;  
+                      li#date
+    .more_cnt.wow.fadeInLeft
+      .container
+        .row
+          #collapse1.panel-collapse.collapse.in
+            .head-title
+              h3 Examination Room
+            |         
+            .panel-body
+              .full_bg
+                .col-sm-3.col-xs-12
+                  label Date :
+                  p#dates
+                |         
+                | &#x9;&#x9;    
+                .login_btn.logg
+                  .two_btn
+                    .col-xs-12
+                      div
+                        label.connt(for='sel1') Room Name
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;  
+                        select#sel1.dropdownlists
+                          option Select
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          option Room 1
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          option Room 2
+                          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                          option Room 3
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;
+                      .col-sm-12.form-group
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;  
+                      label.connt(for='sel1') Patient Name
+                      | &#x9;&#x9;&#x9;&#x9;&#x9;  
+                      select#sel1.dropdownlists
+                        option Select
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        option XYZ
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        option ABC
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                        option DEF
+                | &#x9;&#x9;&#x9;
+                .audios
+                  .tripple_btns
+                    ul
+                      li
+                        i.fa.fa-microphone
+                      |                 
+                      li.stop.btn.btn-primary.btn-lg.round.cbg(type='button')
+                        a(href='') Start
+                      |                 
+                      li.pause.btn.btn-primary.btn-lg.round(type='button')
+                        a(href='') Pause
+                      |                 
+                      li.stop.btn.btn-primary.btn-lg.round(type='button')
+                        a(href='') Stop
+                    |  
+                    audio(controls='', autoplay='')
+              //
+                <div class="audio_up">
+                <a href="#" class="audiofiles">Audio Files</a>
+                </div>!
+          |   
+          .tab-content
+            #home.tab-pane.fade.in.active
+              .table-responsive
+                table#data.table
+                  thead
+                    tr
+                      th Date
+                      |         
+                      th File Name
+                      |         
+                      th Duration
+                      |         
+                      th
+                        h4 Scribe Status
+                        |  
+                        label AP
+                        label Full
+                      |          
+                      th
+                        h4 Approved Status
+                        |  
+                        label AP
+                        label Full
+                      |          
+                      th Final Status
+                  |     
+                  tbody
+                    tr
+                      td 20.12.17
+                      |         
+                      td
+                        a(href='') abc_12_2017-04-04
+                      |         
+                      td 10.00
+                      |         
+                      td
+                        a(href='') Correct
+                        |  | 
+                        |           
+                        a(href='') Complete
+                      |         
+                      td
+                        a(href='') Correct
+                        |  | 
+                        |            
+                        a(href='') Complete
+                      |         
+                      td  Progress 
+                    |       
+                    tr
+                      td 20.12.17
+                      |         
+                      td
+                        a(href='') def_12_2017-04-05
+                      |         
+                      td 10.00
+                      |          
+                      td
+                        a(href='') Correct
+                        |  | 
+                        |            
+                        a(href='') Complete
+                      |         
+                      td
+                        a(href='') Correct
+                        |  | 
+                        |           
+                        a(href='') Complete
+                      |         
+                      td  Complete 
+                    |       
+                    tr
+                      td 20.12.17
+                      |         
+                      td
+                        a(href='') aaa_12_2017-04-07
+                      |         
+                      td 10.00
+                      |          
+                      td
+                        a(href='') Correct
+                        |  | 
+                        |           
+                        a(href='') Complete
+                      |         
+                      td
+                        a(href='') Correct
+                        |  | 
+                        |           
+                        a(href='') Complete
+                      |         
+                      td  Progress 
+                    | &#x9;  
+                    tr
+                      td 20.12.17
+                      |         
+                      td
+                        a(href='') def_12_2017-04-05
+                      |         
+                      td 10.00
+                      |          
+                      td
+                        a(href='') Correct
+                        |  | 
+                        |           
+                        a(href='') Complete
+                      |         
+                      td
+                        a(href='') Correct
+                        |  | 
+                        |           
+                        a(href='') Complete
+                      |         
+                      td  Progress 
+                    |       
+                    tr
+                      td 20.12.17
+                      |         
+                      td
+                        a(href='') aaa_12_2017-04-07
+                      |         
+                      td 10.00
+                      |          
+                      td
+                        a(href='') Correct
+                        |  | 
+                        |           
+                        a(href='') Complete
+                      |         
+                      td
+                        a(href='') Correct
+                        |  | 
+                        |           
+                        a(href='') Complete
+                      |         
+                      td  Progress 
+    |  
+    .footer.wow.fadeInUp
+      .container
+        .row
+          .register_footer
+            .col-sm-12
+              p.footer_content Copyright 2017.All Rights Reserved.
+            |    
+            .col-sm-3
+//
+  <style>
+  .footer{
+  margin-top: 30px;
+  height:81px;
+  }
+  .more_cnt {
+  min-height: 69.44vh;
+  }
+  p.footer_content {
+  height: 0px;
+  margin-top: 0px !important;
+  }
+  .footer_logo {
+  margin-top: 0px;
+  }
+  </style>
