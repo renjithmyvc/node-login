@@ -41,7 +41,7 @@ module.exports = function(app) {
 	app.get('/signin', function(req, res) {
 		// check if the user's credentials are saved in a cookie //
 		if (req.cookies.user == undefined || req.cookies.pass == undefined){
-			res.render('login', { title: 'Hello - Please Login To Your Account' });
+			res.render('signin', { title: 'Hello - Please Login To Your Account' });
 		}	else{
 		// attempt automatic login //
 			AM.autoLogin(req.cookies.user, req.cookies.pass, function(o){
