@@ -5,13 +5,13 @@ head
     meta(name='viewport', content='initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no')
     link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet')
     |   
-    link(href='css/bootstrap.min.css', rel='stylesheet')
-    link(href='css/animate.css', rel='stylesheet')
-    link(href='css/style.css', rel='stylesheet')
+    link(href='/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/css/animate.css', rel='stylesheet')
+    link(href='/css/layout.css', rel='stylesheet')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
-    script(type='text/javascript', src='js/bootstrap.min.js')
+    script(type='text/javascript', src='/js/bootstrap.min.js')
     |   
-    script(type='text/javascript', src='js/wow.min.js')
+    script(type='text/javascript', src='/js/wow.min.js')
   body
     .login_form
       // header
@@ -37,7 +37,7 @@ head
                 .hole_max.wow.fadeInRight
                   .section_vertical
                     .section_ones
-                      img.img-responsive(src='doctor.jpg', alt='Doctor')
+                      img.img-responsive(src='/images/doctor.jpg', alt='Doctor')
               | &#x9;&#x9;&#x9;&#x9;&#x9;
               .col-md-6
                 .hole_max.wow.fadeInLeft
