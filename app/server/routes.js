@@ -42,6 +42,21 @@ module.exports = function(app) {
 		res.render('signin', {  title: 'Signup', countries : CT });
 	});
 	
+	app.post('/signin', function(req, res){
+		AM.manualLogin(req.body['user'], req.body['pass'], function(e, o){
+			if (!o){
+				res.status(400).send(e);
+			}	else{
+				req.session.user = o;
+				if (req.body['remember-me'] == 'true'){
+					res.cookie('user', o.user, { maxAge: 900000 });
+					res.cookie('pass', o.pass, { maxAge: 900000 });
+				}
+				res.status(200).send(o);
+			}
+		});
+	});
+	
 	app.get('/changepassword', function(req, res) {
 		res.render('changepassword', {  title: 'Change Password', countries : CT });
 	});
