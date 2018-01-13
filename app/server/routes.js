@@ -43,7 +43,11 @@ module.exports = function(app) {
 	});
 	
 	app.get('/changepassword', function(req, res) {
-		res.render('changepassword', {  title: 'Signup', countries : CT });
+		res.render('changepassword', {  title: 'Change Password', countries : CT });
+	});
+	
+	app.get('/reports', function(req, res) {
+		res.render('reports', {  title: 'Reports', countries : CT });
 	});
 	
 // logged-in user homepage //
