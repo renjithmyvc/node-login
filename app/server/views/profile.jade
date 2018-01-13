@@ -1,0 +1,125 @@
+doctype html(lang='en')
+head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title  DOCTOR PROFILE 
+    meta(name='viewport', content='initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet')
+    |   
+    link(href='/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/css/animate.css', rel='stylesheet')
+    link(href='/css/style.css', rel='stylesheet')
+    link(href='/css/font-awesome.min.css', rel='stylesheet')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(type='text/javascript', src='/js/bootstrap.min.js')
+    |   
+    script(type='text/javascript', src='/js/wow.min.js')
+  body
+    .header_landing_page.wow.fadeInDown
+      .container
+        .row
+          .col-sm-2.col-xs-6
+            .logo
+              h1
+                a(href='#') Logo
+          |       
+          .col-sm-10.col-xs-6
+            .navbar.navbar-default.menu_n
+              .navbar-header
+                span.main_text_menu Menu 
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                  i.fa.fa-bars
+                .navbar-collapse.collapse
+                  .navmenus
+                    ul
+                      li
+                        a(href='examination.htm') Examination
+                      |           
+                      li
+                        a(href='reports.html') Reports
+                      | &#x9;
+                      |           
+                      li
+                        p.welcomeadmin Welcome Doctor
+                      | &#x9;&#x9;  
+                      |           
+                      li.profile_dropdwon
+                        a.dropdown-toggle(href='javascript:void(0)', data-toggle='dropdown')
+                          img.defaultimage(src='noimage.png')
+                          |  
+                          span
+                            b.caret
+                        |  
+                        |            
+                        ul.dropdown-menu
+                          li
+                            a(href='profile.html') Profile
+                          |             
+                          li
+                            a(href='changepassword.html') Change Password
+                          |             
+                          li
+                            a(href='doctor_login.htm') Logout
+                      | &#x9;&#x9;  
+                      li#date
+    // content
+    .sign_in
+      .container
+        .row
+          .hole_max.wow.fadeInLeft
+            .section_vertical
+              .section_one
+                form.form-horizontal.doctorregister(role='form')
+                  .form-group.row
+                    label.col-sm-3.control-label.use(for='doctorname') Doctor Name
+                    |                     
+                    .col-sm-9
+                      input#username.form-control(type='text', placeholder='')
+                  |                 
+                  .form-group.row
+                    label.col-sm-3.control-label.use(for='email') Email Address
+                    |                     
+                    .col-sm-9
+                      input#email.form-control(type='email', placeholder='Email')
+                  | &#x9;&#x9;&#x9;&#x9;
+                  .form-group.row
+                    label.col-sm-3.control-label.use(for='phone') Phone Number
+                    |                     
+                    .col-sm-9
+                      input#phone.form-control(type='text', placeholder='')
+                  | &#x9;&#x9;&#x9;&#x9;
+                  .form_group.row
+                    label.col-sm-3.control-label.use(for='address') Address
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;
+                    .col-sm-9
+                      textarea#comment.form-control(name='address', placeholder='', rows='5')  
+                  |                 
+                  .form-group.row
+                    label.col-sm-3.control-label.use(for='password') Password
+                    |                     
+                    .col-sm-9
+                      input#password.form-control(type='password', placeholder='Password')
+                  |                 
+                  |                 
+                  .form-group.row
+                    label.col-sm-3.control-label.use(for='profileimage') Profile Image
+                    |                     
+                    .col-sm-9
+                      input#profileimage.form-control(type='file', placeholder='')
+                  |                 
+                  |                 
+                  |                 
+                  |                 
+                  .login_btn
+                    .two_btn
+                      a.login_button.changepassword(type='submit', value='Submit') Submit
+                      |           
+                      a.login_button.resetpassword(type='reset', value='Reset') Reset
+                // /form
+    // end
+    .footer.wow.fadeInUp
+      .container
+        .row
+          .col-sm-3
+          |       
+          .col-sm-12
+            p.footer_content Copyright 2017.All Rights Reserved.
